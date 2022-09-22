@@ -1,4 +1,8 @@
+// ------------------ GLOBAL ------------------ //
+
 $primary: #94d2bd;
+$primary-op-low: #94d2bd8e;
+$primary-dark: #5b9984;
 $box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
   0 4px 6px -4px rgba(0, 0, 0, 0.1);
 $drop-shadow: 0 0 0.4rem rgb(0, 0, 0, 0.3);
@@ -27,29 +31,8 @@ body {
   font-weight: 400;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  position: sticky;
-  top: 0;
-  border-bottom: 2px solid $primary;
-  z-index: 1;
-
-  .nav {
-    ul {
-      display: flex;
-      list-style: none;
-      gap: 3rem;
-      padding: 1.2rem 0;
-
-      li {
-        color: rgb(255, 255, 255);
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-      }
-    }
-  }
+.hidden {
+  display: none;
 }
 
 .overlay {
@@ -66,6 +49,48 @@ body {
   flex-direction: column;
 }
 
+.content-overlay {
+  background-color: rgba(250, 235, 215, 0.788);
+  transition: 500ms ease;
+}
+
+// ------------------ HEADER/NAVIGATION ------------------ //
+
+.header {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid $primary;
+  z-index: 1;
+
+  .nav {
+    display: flex;
+    align-items: baseline;
+    gap: 3rem;
+
+    .nav-buttons {
+      display: flex;
+      flex-direction: row;
+      background-color: transparent;
+      border: none;
+      padding: 1.8rem 0;
+
+      color: rgb(255, 255, 255);
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      transition: 300ms ease;
+
+      &:hover {
+        background-color: $primary-op-low;
+      }
+    }
+  }
+}
+
+// ------------------ HERO/HOME CONTENT ------------------ //
+
 .hero-text {
   display: flex;
   flex-direction: column;
@@ -73,7 +98,7 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
-//   border: 1px solid red;
+  transition: 500ms ease;
 
   h1 {
     font-family: lust-script-display, sans-serif;
@@ -96,11 +121,77 @@ body {
   }
 }
 
+// ------------------ ABOUT CONTENT ------------------ //
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgb(36, 36, 36);
+
+  h1 {
+    color: $primary-dark;
+  }
+
+  h2 {
+    margin-top: -6.4rem;
+    margin-bottom: 0;
+  }
+
+  hr {
+    width: 50%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  p {
+    width: 50%;
+    text-align: justify;
+  }
+}
+
+// ------------------ MENU CONTENT ------------------ //
+
+.menu-grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    gap: 3.5rem;
+    width: 70%;
+    padding: 5rem;
+    
+}
+
+.menu-items {
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem;
+    height: 200px;
+    width: 300px;
+    border-radius: 1rem;
+}
+
+// ------------------ FOOTER ------------------ //
+
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 7vh;
-  width: 413px;
+  width: 429px;
   border-top: 2px solid $primary;
+  letter-spacing: 1px;
 }

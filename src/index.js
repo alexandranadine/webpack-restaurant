@@ -1,3 +1,4 @@
-console.log("hey")
-console.log("hey")
+import { buildSite } from "./createSite";
 import "./index.scss";
+
+buildSite();
