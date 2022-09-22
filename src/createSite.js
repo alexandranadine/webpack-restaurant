@@ -1,7 +1,7 @@
 import { setHome } from "./home";
 import { setAbout } from "./about";
 import { setMenu } from "./menu";
-import { contact } from "./contact";
+import { setContact } from "./contact";
 
 const contentContainer = document.querySelector("#content");
 const overlay = document.createElement("div");
@@ -26,8 +26,8 @@ function createHeader() {
 function createNav() {
   navigation.classList.add("nav");
 
-  const homeButton = document.createElement("button");
-  homeButton.textContent = "home";
+  const homeButton = document.createElement("button")
+  homeButton.innerHTML = "<span>home</span>";
   homeButton.classList.add("nav-buttons");
   homeButton.addEventListener("click", (e) => {
     if (e.target.classList.contains("active-button")) return;
@@ -36,16 +36,17 @@ function createNav() {
   });
 
   const aboutButton = document.createElement("button");
-  aboutButton.textContent = "about";
+  aboutButton.innerHTML = "<span>about</span>";
   aboutButton.classList.add("nav-buttons");
   aboutButton.addEventListener("click", (e) => {
     if (e.target.classList.contains("active-button")) return;
     setActive(aboutButton);
     setAbout();
+
   });
 
   const menuButton = document.createElement("button");
-  menuButton.textContent = "menu";
+  menuButton.innerHTML = "<span>menu</span>";
   menuButton.classList.add("nav-buttons");
   menuButton.addEventListener("click", (e) => {
     if (e.target.classList.contains("active-button")) return;
@@ -54,7 +55,7 @@ function createNav() {
   });
 
   const contactButton = document.createElement("button");
-  contactButton.textContent = "contact";
+  contactButton.innerHTML = "<span>contact</span>";
   contactButton.classList.add("nav-buttons");
   contactButton.addEventListener("click", (e) => {
     if (e.target.classList.contains("active-button")) return;

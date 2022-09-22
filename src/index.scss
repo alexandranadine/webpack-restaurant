@@ -3,6 +3,7 @@
 $primary: #94d2bd;
 $primary-op-low: #94d2bd8e;
 $primary-dark: #5b9984;
+$white-op-low: rgba(255, 255, 255, 0.63);
 $box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
   0 4px 6px -4px rgba(0, 0, 0, 0.1);
 $drop-shadow: 0 0 0.4rem rgb(0, 0, 0, 0.3);
@@ -50,7 +51,8 @@ body {
 }
 
 .content-overlay {
-  background-color: rgba(250, 235, 215, 0.788);
+  background-color: rgba(0, 0, 0, 0.747);
+  margin: 8rem 0 5rem 0;
   transition: 500ms ease;
 }
 
@@ -75,12 +77,12 @@ body {
       background-color: transparent;
       border: none;
       padding: 1.8rem 0;
-
       color: rgb(255, 255, 255);
       font-size: 1.1rem;
       letter-spacing: 3px;
       text-transform: uppercase;
       transition: 300ms ease;
+      cursor: pointer;
 
       &:hover {
         background-color: $primary-op-low;
@@ -132,7 +134,7 @@ body {
   font-size: 1.2rem;
   line-height: 1.5;
   font-weight: 400;
-  color: rgb(36, 36, 36);
+  color: rgb(255, 255, 255);
 
   h1 {
     color: $primary-dark;
@@ -164,24 +166,23 @@ body {
 // ------------------ MENU CONTENT ------------------ //
 
 .menu-grid {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: auto;
-    gap: 3.5rem;
-    width: 70%;
-    padding: 5rem;
-    
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 3.5rem;
+  width: 70%;
+  padding: 5rem;
 }
 
 .menu-items {
-    background-color: dodgerblue;
-    color: white;
-    padding: 1rem;
-    height: 200px;
-    width: 300px;
-    border-radius: 1rem;
+  flex-grow: 1;
+  background-color: $white-op-low;
+  color: #333;
+  padding: 1rem;
+  width: 320px;
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
 }
 
 // ------------------ FOOTER ------------------ //

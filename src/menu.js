@@ -1,5 +1,3 @@
-
-
 function createMenu() {
   const heroText = document.querySelector(".hero-text");
   const menuGrid = document.createElement("div");
@@ -17,11 +15,8 @@ function createMenu() {
 
   addCard();  addCard();  addCard();
   addCard();  addCard();  addCard();
- 
 
-  // heroText.innerHTML = "<h1>Valhalla</h1>" + "<h2>pub & eatery</h2>";
-
-  return menu;
+  return;
 }
 
 export function setMenu() {

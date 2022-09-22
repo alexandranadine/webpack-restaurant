@@ -9,7 +9,7 @@ function createAbout() {
   para.textContent =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi debitis nulla, tempore nisi adipisci voluptatibus libero at officia placeat enim, saepe sed quae doloremque. Consequuntur sed rerum facilis recusandae magnam. Nemo quas veniam aspernatur numquam distinctio. Reiciendis, vitae commodi sunt libero voluptates facere aliquid incidunt rerum optio, exercitationem nesciunt voluptatibus?";
 
-    return about;
+  return about;
 }
 
 export function setAbout() {
